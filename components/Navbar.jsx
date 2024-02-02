@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 import logo from '@/public/logo.webp';
 import Image from 'next/image';
+import { Globe } from 'lucide-react';
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,11 +43,16 @@ const Navbar = () => {
               <Image className="w-full" src={logo} alt="site logo" />
             </a>
 
-            <div className="md:hidden">
+            <div
+              className={`md:hidden flex items-center ${
+                navbar ? 'text-black' : 'text-white'
+              }`}
+            >
+              <Globe size={20} className="mr-4 cursor-pointer" />
               <button
-                className={`p-2 rounded-md outline-none ${
-                  navbar ? 'text-black' : 'text-white'
-                }`}
+                className={`p-2 rounded-md outline-none 
+                  
+                `}
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -130,7 +136,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="sm:flex sm:gap-4 hidden">
+        <div className="sm:flex sm:gap-4 hidden items-center justify-center">
+          <Globe size={24} color="#fff" className="mr-4 cursor-pointer" />
           <a
             className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow"
             href="/contact"
