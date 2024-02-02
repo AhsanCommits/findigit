@@ -71,7 +71,7 @@ const ContactHero = () => {
               <select
                 name="industry"
                 id="industry"
-                className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-black p-4 pe-12 text-sm shadow-sm"
+                className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-black p-4 pe-12 text-sm shadow-sm bg-white"
               >
                 <option value="">Which Industry</option>
                 <option value="web">Web Development</option>
