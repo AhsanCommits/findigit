@@ -90,7 +90,11 @@ const Navbar = () => {
             </div>
 
             <div className="block md:hidden">
-              <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+              <button
+                className={`rounded p-2 text-white transition hover:text-gray-600/75 ${
+                  isScrolled ? 'bg-[#171717]' : 'bg-transparent'
+                }`}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
