@@ -29,7 +29,7 @@ const Navbar = () => {
   };
   return (
     <nav
-      className={`w-full shadow fixed top-0 ${
+      className={`z-50 w-full shadow fixed top-0 ${
         isScrolled ? 'bg-[#171717]' : 'bg-black'
       }
       ${navbar ? 'bg-white' : 'bg-[#171717]'}
