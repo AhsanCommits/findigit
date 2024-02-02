@@ -14,7 +14,6 @@ const Hero = () => {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500">
                 experiences
               </span>
-              .
             </strong>
           </h1>
 

@@ -43,7 +43,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-white transition hover:text-white/75 font-medium"
-                    href="#home"
+                    href="/"
                   >
                     Home
                   </a>

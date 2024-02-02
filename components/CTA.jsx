@@ -5,7 +5,7 @@ const CTA = () => {
     <section className="overflow-hidden bg-[url(https://raw.githubusercontent.com/arslanzaki/findigit_site/main/public/images/business.png)] bg-cover bg-top bg-no-repeat">
       <div className="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="flex flex-col items-center justify-center text-center">
-          <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-5xl">
+          <h2 className="text-2xl font-semibold text-white sm:text-3xl md:text-5xl">
             Ready to Elevate Your Digital Presence?
           </h2>
 

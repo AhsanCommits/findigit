@@ -31,7 +31,7 @@ const Services = () => {
                 className="mt-1 text-sm bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500"
                 href={service.link}
               >
-                Learn More →
+                Learn More <span className="font-semibold">→</span>
               </a>
             </div>
           ))}
