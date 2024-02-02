@@ -4,7 +4,7 @@ const ContactHero = () => {
       <div className="flex justify-evenly flex-wrap mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="w-full sm:max-w-xl mx-auto text-center">
           <h1 className="text-3xl font-medium sm:text-5xl text-white mb-6">
-            <span className="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose font-bold">
+            <span className="text-4xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose font-bold">
               Get in
               <br />
             </span>
@@ -31,7 +31,7 @@ const ContactHero = () => {
               <div className="relative">
                 <input
                   type="text"
-                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-black"
+                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A]"
                   placeholder="Full Name"
                 />
               </div>
@@ -44,7 +44,7 @@ const ContactHero = () => {
               <div className="relative">
                 <input
                   type="text"
-                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-black"
+                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A]"
                   placeholder="Number"
                 />
               </div>
@@ -57,7 +57,7 @@ const ContactHero = () => {
               <div className="relative">
                 <input
                   type="email"
-                  className="w-full rounded-lg border border-black p-4 pe-12 text-sm shadow-sm"
+                  className="w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm"
                   placeholder="Email"
                 />
               </div>
@@ -71,7 +71,7 @@ const ContactHero = () => {
               <select
                 name="industry"
                 id="industry"
-                className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-black p-4 pe-12 text-sm shadow-sm bg-white"
+                className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm bg-white"
               >
                 <option value="">Which Industry</option>
                 <option value="web">Web Development</option>
