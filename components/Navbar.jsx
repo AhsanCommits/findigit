@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import logo from '@/public/logo.webp';
 import Image from 'next/image';
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,99 +23,123 @@ const Navbar = () => {
     };
   }, []);
 
+  const toggleMobileMenu = () => {
+    setNavbar(!navbar);
+  };
   return (
-    <header
-      className={`p-4 fixed top-0 z-50 w-full ${
-        isScrolled ? 'bg-[#171717]' : 'bg-transparent'
-      }`}
+    <nav
+      className={`w-full shadow fixed top-0 ${
+        isScrolled ? 'bg-[#171717]' : 'bg-black'
+      }
+      ${navbar ? 'bg-white' : 'bg-[#171717]'}
+      `}
     >
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="md:flex md:items-center md:gap-12">
-            <a className="block" href="/">
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <div>
+          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <a href="javascript:void(0)">
               <span className="sr-only">Home</span>
               <Image className="w-full" src={logo} alt="site logo" />
             </a>
-          </div>
 
-          <div className="hidden md:block">
-            <nav aria-label="Global">
-              <ul className="flex items-center gap-6 text-sm">
-                <li>
-                  <a
-                    className="text-white transition hover:text-white/75 font-medium"
-                    href="/"
-                  >
-                    Home
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-white transition hover:text-white/75 font-medium"
-                    href="#services"
-                  >
-                    Services
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-white transition hover:text-white/75 font-medium"
-                    href="#testimonials"
-                  >
-                    Testimonials
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-white transition hover:text-white/75 font-medium"
-                    href="/about"
-                  >
-                    About
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
-              <a
-                className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="/contact"
-              >
-                Contact Us
-              </a>
-            </div>
-
-            <div className="block md:hidden">
+            <div className="md:hidden">
               <button
-                className={`rounded p-2 text-white transition hover:text-gray-600/75 ${
-                  isScrolled ? 'bg-[#171717]' : 'bg-transparent'
+                className={`p-2 rounded-md outline-none ${
+                  navbar ? 'text-black' : 'text-white'
                 }`}
+                onClick={() => setNavbar(!navbar)}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                {navbar ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
         </div>
+
+        <div>
+          <div
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+              navbar ? 'block' : 'hidden'
+            }`}
+          >
+            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+              <li
+                className={`${
+                  navbar
+                    ? 'text-black hover:text-black/75'
+                    : 'text-white hover:text-white/75'
+                } transition  font-medium hover:underline`}
+              >
+                <a href="/">Home</a>
+              </li>
+              <li
+                className={`${
+                  navbar
+                    ? 'text-black hover:text-black/75'
+                    : 'text-white hover:text-white/75'
+                } transition  font-medium hover:underline`}
+              >
+                <a href="#services">Services</a>
+              </li>
+              <li
+                className={`${
+                  navbar
+                    ? 'text-black hover:text-black/75'
+                    : 'text-white hover:text-white/75'
+                } transition  font-medium hover:underline`}
+              >
+                <a href="#testimonials">Testimonials</a>
+              </li>
+              <li
+                className={`${
+                  navbar
+                    ? 'text-black hover:text-black/75'
+                    : 'text-white hover:text-white/75'
+                } transition  font-medium hover:underline`}
+              >
+                <a href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="sm:flex sm:gap-4 hidden">
+          <a
+            className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+            href="/contact"
+          >
+            Contact Us
+          </a>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
