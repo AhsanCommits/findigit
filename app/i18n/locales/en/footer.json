@@ -1,0 +1,26 @@
+{
+  "stayUpdated": "Stay updated on how the future of technology is shaping!",
+  "enterEmail": "Enter your email here",
+  "subscribe": "Subscribe",
+  "aboutUs": "FinDigit offers expertise that surpasses industry standards, providing innovative solutions ranging from AI to blockchain. We specialize in crafting tailored and swiftly deployed projects. Our user-centric design guarantees visually stunning and intuitively engaging interfaces, delivering a transformative digital experience.",
+  "services": {
+    "title": "Services",
+    "webDevelopment": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "softwareDevelopment": "Software Development",
+    "eCommerce": "E-commerce"
+  },
+  "about": {
+    "title": "About",
+    "whoWeAre": "Who we are",
+    "ourTeam": "Our team",
+    "caseStudies": "Case Studies"
+  },
+  "quickLinks": {
+    "title": "Quick Links",
+    "home": "Home",
+    "contactUs": "Contact Us",
+    "testimonials": "Testimonials"
+  },
+  "rightsReserved": "© FinDigit 2024. All rights reserved."
+}

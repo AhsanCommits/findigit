@@ -1,10 +1,14 @@
-const Footer = () => {
+import { useTranslation } from '../../i18n';
+
+const Footer = async ({ lng }) => {
+  const { t } = await useTranslation(lng, 'footer');
+
   return (
     <footer className="bg-black">
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-md">
           <strong className="block text-center text-xl font-bold text-white sm:text-3xl">
-            Stay updated on how future of technology is shaping!
+            {t('stayUpdated')}
           </strong>
 
           <form className="mt-6">
@@ -18,11 +22,11 @@ const Footer = () => {
                 className="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
                 id="email"
                 type="email"
-                placeholder="Enter your email here"
+                placeholder={t('enterEmail')}
               />
 
               <button className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full  px-5 py-3 text-sm font-medium text-white transition bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 hover:text-white">
-                Subscribe
+                {t('subscribe')}
               </button>
             </div>
           </form>
@@ -31,11 +35,7 @@ const Footer = () => {
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div className="mx-auto max-w-sm lg:max-w-none">
             <p className="mt-4 text-center text-gray-400 lg:text-left lg:text-lg">
-              FinDigit for expertise that exceeds industry standards, innovative
-              solutions from AI to blockchain, and tailored, swiftly deployed
-              projects. Our user-centric design ensures visually stunning and
-              intuitively engaging interfaces, creating a transformative digital
-              experience.
+              {t('aboutUs')}
             </p>
 
             <div className="mt-6 flex justify-center gap-4 lg:justify-start">
@@ -127,7 +127,9 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
             <div>
-              <strong className="font-medium text-gray-300"> Services </strong>
+              <strong className="font-medium text-gray-300">
+                {t('services.title')}
+              </strong>
 
               <ul className="mt-6 space-y-1">
                 <li>
@@ -135,7 +137,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    Web Development
+                    {t('services.webDevelopment')}
                   </a>
                 </li>
 
@@ -144,7 +146,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    Mobile Apps
+                    {t('services.mobileApps')}
                   </a>
                 </li>
 
@@ -153,7 +155,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    Software Development
+                    {t('services.softwareDevelopment')}
                   </a>
                 </li>
 
@@ -162,14 +164,16 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    E-commerce
+                    {t('services.eCommerce')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <strong className="font-medium text-gray-300"> About </strong>
+              <strong className="font-medium text-gray-300">
+                {t('about.title')}
+              </strong>
 
               <ul className="mt-6 space-y-1">
                 <li>
@@ -177,7 +181,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="#stats"
                   >
-                    Who we are
+                    {t('about.whoWeAre')}
                   </a>
                 </li>
 
@@ -186,7 +190,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    Our team
+                    {t('about.ourTeam')}
                   </a>
                 </li>
 
@@ -195,14 +199,16 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    Case Studies
+                    {t('about.caseStudies')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <strong className="font-medium text-gray-300">Quick Links</strong>
+              <strong className="font-medium text-gray-300">
+                {t('quickLinks.title')}
+              </strong>
 
               <ul className="mt-6 space-y-1">
                 <li>
@@ -210,7 +216,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/"
                   >
-                    Home
+                    {t('quickLinks.home')}
                   </a>
                 </li>
 
@@ -219,7 +225,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="/contact"
                   >
-                    Contact Us
+                    {t('quickLinks.contactUs')}
                   </a>
                 </li>
 
@@ -228,7 +234,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:text-gray-400/75"
                     href="#testimonials"
                   >
-                    Testimonials
+                    {t('quickLinks.testimonials')}
                   </a>
                 </li>
               </ul>
@@ -238,7 +244,7 @@ const Footer = () => {
 
         <div className="mt-16 border-t border-gray-100 pt-8">
           <p className="text-center text-xs/relaxed text-gray-400">
-            © FinDigit 2024. All rights reserved.
+            {t('rightsReserved')}
           </p>
         </div>
       </div>

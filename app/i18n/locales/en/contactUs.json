@@ -1,0 +1,17 @@
+{
+  "contactUs": {
+    "sectionTitle": "Reach to Our Presence Across The World",
+    "message": {
+      "title": "Message",
+      "contactInfo": "+9661 15107 030"
+    },
+    "email": {
+      "title": "Email",
+      "contactInfo": "book@findigit.com"
+    },
+    "call": {
+      "title": "Call",
+      "contactInfo": "+9661 15107 030 - UAE"
+    }
+  }
+}

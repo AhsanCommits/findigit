@@ -1,11 +1,13 @@
 import { testimonialsList } from '@/constants';
+import { useTranslation } from '../../i18n';
 
-const Testimonials = () => {
+const Testimonials = async ({ lng }) => {
+  const { t } = await useTranslation(lng, 'testimonials');
   return (
     <section className="bg-white" id="testimonials">
       <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <h2 className="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-          Testimonials
+          {t('sectionTitle')}
         </h2>
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
@@ -66,12 +68,14 @@ const Testimonials = () => {
                   </div>
 
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
-                    {testimonial.name}
+                    {t(`testimonials.${testimonial.nameKey}`)}
                   </p>
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-700">{testimonial.description}</p>
+              <p className="mt-4 text-gray-700">
+                {t(`testimonials.${testimonial.descriptionKey}`)}
+              </p>
             </blockquote>
           ))}
         </div>

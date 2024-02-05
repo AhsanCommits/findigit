@@ -1,0 +1,20 @@
+{
+  "contactHero": {
+    "sectionTitle1": "Get in",
+    "sectionTitle2": "Touch with Us!",
+    "formSubtitle": "Fill the form, and we'll be in touch as soon as possible",
+    "placeholders": {
+      "name": "Full Name",
+      "number": "Number",
+      "email": "Email"
+    },
+    "industryLabel": "Industries",
+    "industryOptions": {
+      "default": "Which Industry",
+      "web": "Web Development",
+      "app": "App Development",
+      "ai": "Artificial Intelligence"
+    },
+    "submitButton": "Submit"
+  }
+}

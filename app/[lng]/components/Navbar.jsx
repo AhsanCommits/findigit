@@ -1,11 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslation } from '../../i18n/client';
 
 import logo from '@/public/logo.webp';
 import Image from 'next/image';
-import { Globe } from 'lucide-react';
-const Navbar = () => {
+
+import LanguageSwitcher from './LanguageSwitcher';
+const Navbar = ({ lng }) => {
+  const { t } = useTranslation(lng, 'navbar');
   const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -38,7 +41,7 @@ const Navbar = () => {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
+            <a href={`/${lng}`}>
               <span className="sr-only">Home</span>
               <Image className="w-full" src={logo} alt="site logo" />
             </a>
@@ -48,11 +51,10 @@ const Navbar = () => {
                 navbar ? 'text-black' : 'text-white'
               }`}
             >
-              <Globe size={20} className="mr-4 cursor-pointer" />
+              <LanguageSwitcher lng={lng} />
               <button
                 className={`p-2 rounded-md outline-none 
-                  
-                `}
+                                  `}
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -100,10 +102,10 @@ const Navbar = () => {
                 className={`${
                   navbar
                     ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-white/75'
-                } transition  font-medium hover:underline`}
+                    : 'text-white hover:text-white/75 ml-6'
+                } transition  font-medium hover:underline `}
               >
-                <a href="/">Home</a>
+                <a href={`/${lng}`}>{t('home')}</a>
               </li>
               <li
                 className={`${
@@ -112,7 +114,7 @@ const Navbar = () => {
                     : 'text-white hover:text-white/75'
                 } transition  font-medium hover:underline`}
               >
-                <a href="#services">Services</a>
+                <a href={`/${lng}#services`}>{t('services')}</a>
               </li>
               <li
                 className={`${
@@ -121,7 +123,7 @@ const Navbar = () => {
                     : 'text-white hover:text-white/75'
                 } transition  font-medium hover:underline`}
               >
-                <a href="#testimonials">Testimonials</a>
+                <a href={`/${lng}#testimonials`}>{t('testimonials')}</a>
               </li>
               <li
                 className={`${
@@ -130,19 +132,19 @@ const Navbar = () => {
                     : 'text-white hover:text-white/75'
                 } transition  font-medium hover:underline`}
               >
-                <a href="/about">About</a>
+                <a href={`/${lng}/about`}>{t('about')}</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="sm:flex sm:gap-4 hidden items-center justify-center">
-          <Globe size={24} color="#fff" className="mr-4 cursor-pointer" />
+          <LanguageSwitcher lng={lng} />
           <a
             className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-            href="/contact"
+            href={`/${lng}/contact`}
           >
-            Contact Us
+            {t('contact')}
           </a>
         </div>
       </div>

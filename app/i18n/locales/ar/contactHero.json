@@ -1,0 +1,20 @@
+{
+  "contactHero": {
+    "sectionTitle1": "تواصل",
+    "sectionTitle2": "معنا!",
+    "formSubtitle": "املأ النموذج، وسنتواصل معك في أقرب وقت ممكن",
+    "placeholders": {
+      "name": "الاسم الكامل",
+      "number": "الرقم",
+      "email": "البريد الإلكتروني"
+    },
+    "industryLabel": "الصناعات",
+    "industryOptions": {
+      "default": "أي صناعة",
+      "web": "تطوير الويب",
+      "app": "تطوير التطبيقات",
+      "ai": "الذكاء الاصطناعي"
+    },
+    "submitButton": "إرسال"
+  }
+}

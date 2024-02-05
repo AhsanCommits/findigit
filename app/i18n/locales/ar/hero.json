@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": {
+      "where": "حيث",
+      "ideas": "أفكار",
+      "transformInto": "تتحول إلى",
+      "digital": "رقمية",
+      "experiences": "تجارب"
+    },
+    "button": {
+      "text": "اتصل بنا"
+    }
+  }
+}

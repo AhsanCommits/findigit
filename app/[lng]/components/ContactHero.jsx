@@ -1,14 +1,17 @@
-const ContactHero = () => {
+import { useTranslation } from '../../i18n';
+
+const ContactHero = async ({ lng }) => {
+  const { t } = await useTranslation(lng, 'contactHero');
   return (
     <section className="bg-black  z-0 " id="home">
       <div className="flex justify-evenly flex-wrap mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="w-full sm:max-w-xl mx-auto text-center">
           <h1 className="text-3xl font-medium sm:text-5xl text-white mb-6">
             <span className="text-4xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose font-bold">
-              Get in
+              {t('contactHero.sectionTitle1')}
               <br />
             </span>
-            <span>Touch with Us!</span>
+            <span>{t('contactHero.sectionTitle2')}</span>
           </h1>
         </div>
 
@@ -18,7 +21,7 @@ const ContactHero = () => {
               className="text-2xl font-semibold
          sm:text-3xl"
             >
-              Fill the form and we&apos;ll be in touch as soon as possible
+              {t('contactHero.formSubtitle')}
             </h1>
           </div>
 
@@ -32,7 +35,7 @@ const ContactHero = () => {
                 <input
                   type="text"
                   className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A]"
-                  placeholder="Full Name"
+                  placeholder={t('contactHero.placeholders.name')}
                 />
               </div>
             </div>
@@ -45,7 +48,7 @@ const ContactHero = () => {
                 <input
                   type="text"
                   className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A]"
-                  placeholder="Number"
+                  placeholder={t('contactHero.placeholders.number')}
                 />
               </div>
             </div>
@@ -58,14 +61,14 @@ const ContactHero = () => {
                 <input
                   type="email"
                   className="w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm"
-                  placeholder="Email"
+                  placeholder={t('contactHero.placeholders.email')}
                 />
               </div>
             </div>
 
             <div>
               <label htmlFor="industry" className="sr-only">
-                Industries
+                {t('contactHero.industryLabel')}
               </label>
 
               <select
@@ -73,10 +76,18 @@ const ContactHero = () => {
                 id="industry"
                 className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm bg-white"
               >
-                <option value="">Which Industry</option>
-                <option value="web">Web Development</option>
-                <option value="app">App Development</option>
-                <option value="ai">Artificial Intelligence</option>
+                <option value="">
+                  {t('contactHero.industryOptions.default')}
+                </option>
+                <option value="web">
+                  {t('contactHero.industryOptions.web')}
+                </option>
+                <option value="app">
+                  {t('contactHero.industryOptions.app')}
+                </option>
+                <option value="ai">
+                  {t('contactHero.industryOptions.ai')}
+                </option>
               </select>
             </div>
 
@@ -85,7 +96,7 @@ const ContactHero = () => {
                 type="submit"
                 className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-10 py-2.5 text-sm font-medium text-white shadow"
               >
-                Submit
+                {t('contactHero.submitButton')}
               </button>
             </div>
           </form>

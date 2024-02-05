@@ -1,0 +1,38 @@
+{
+  "stats": {
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description": {
+        "paragraph1": "Our team is made up of over 100 experts, strategists, analysts, and masterminds across our IN, SA, and UK offices.",
+        "paragraph2": "Findigit has been at the forefront of the technology industry, providing cutting-edge solutions to clients across the globe. Our team of experts comprises some of the brightest minds in the field, and we take pride in our ability to consistently deliver results that exceed expectations. At Findigit, we believe that our success is measured by the success of our clients. That's why we're committed to providing top-notch services that help our clients achieve their goals. Over the years, our hard work and dedication have been recognized by several industry awards and recognitions."
+      }
+    },
+    "metrics": {
+      "activePageviews": {
+        "title": "Active Pageviews",
+        "value": "150,000"
+      },
+      "totalRevenue": {
+        "title": "Total Revenue",
+        "value": "$10M+"
+      },
+      "publishedOnGoogleAppleStore": {
+        "title1": "Published on",
+        "title2": "Google or Apple Store",
+        "value": "20 Apps"
+      },
+      "teamMembers": {
+        "title": "Team Members",
+        "value": "200+"
+      },
+      "projectsCompleted": {
+        "title": "Projects Completed",
+        "value": "400+"
+      },
+      "countriesOfOperation": {
+        "title": "Countries of Operation",
+        "value": "10+"
+      }
+    }
+  }
+}
