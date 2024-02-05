@@ -1,3 +1,4 @@
+import { Mail, MailOpen, MessageCircle, PhoneCall } from 'lucide-react';
 import { useTranslation } from '../../i18n';
 
 import Image from 'next/image';
@@ -15,13 +16,7 @@ const ContactUs = async ({ lng }) => {
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-xl p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/20 text-center flex flex-col justify-center items-center">
-            <img
-              className="block"
-              src="/public/whatsapp.svg"
-              alt="icon"
-              width={50}
-              height={50}
-            />
+            <MessageCircle size={40} color="#008000" />
             <h2 className="mt-2 text-xl font-semibold text-black">
               {t('contactUs.message.title')}
             </h2>
@@ -30,13 +25,7 @@ const ContactUs = async ({ lng }) => {
             </p>
           </div>
           <div className="rounded-xl p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/20 text-center flex flex-col justify-center items-center">
-            <img
-              className="block"
-              src="https://raw.githubusercontent.com/AhsanCommits/findigit/6f2fb55dc93184024e7ac4a74e8ba101ab3d003f/public/email.svg?token=AUDNKWQ2ZXAXQIONKLICWDLFYAY5K"
-              alt="icon"
-              width={50}
-              height={50}
-            />
+            <MailOpen size={40} color="#4BC0F4" />
             <h2 className="mt-2 text-xl font-semibold text-black">
               {t('contactUs.email.title')}
             </h2>
@@ -45,13 +34,7 @@ const ContactUs = async ({ lng }) => {
             </p>
           </div>
           <div className="rounded-xl p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/20 text-center flex flex-col justify-center items-center">
-            <img
-              className="block"
-              src="../../../public/phone.svg"
-              alt="icon"
-              width={50}
-              height={50}
-            />
+            <PhoneCall size={35} />
             <h2 className="mt-2 text-xl font-semibold text-black">
               {t('contactUs.call.title')}
             </h2>
