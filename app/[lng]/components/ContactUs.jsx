@@ -17,7 +17,7 @@ const ContactUs = async ({ lng }) => {
           <div className="rounded-xl p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/20 text-center flex flex-col justify-center items-center">
             <img
               className="block"
-              src="/whatsapp.svg"
+              src="/public/whatsapp.svg"
               alt="icon"
               width={50}
               height={50}
@@ -47,7 +47,7 @@ const ContactUs = async ({ lng }) => {
           <div className="rounded-xl p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/20 text-center flex flex-col justify-center items-center">
             <img
               className="block"
-              src="/phone.svg"
+              src="../../../public/phone.svg"
               alt="icon"
               width={50}
               height={50}
