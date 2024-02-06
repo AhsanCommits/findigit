@@ -43,7 +43,7 @@ const Navbar = ({ lng }) => {
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href={`/${lng}`}>
               <span className="sr-only">Home</span>
-              <Image className="w-full" src={logo} alt="site logo" />
+              <Image className="w-28 h-auto" src={logo} alt="site logo" />
             </a>
 
             <div
