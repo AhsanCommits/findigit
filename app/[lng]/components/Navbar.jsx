@@ -138,10 +138,10 @@ const Navbar = ({ lng }) => {
           </div>
         </div>
 
-        <div className="sm:flex sm:gap-4 hidden items-center justify-center">
+        <div className="sm:flex sm:gap-4 hidden items-center justify-center text-white">
           <LanguageSwitcher lng={lng} />
           <a
-            className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+            className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium  shadow"
             href={`/${lng}/contact`}
           >
             {t('contact')}

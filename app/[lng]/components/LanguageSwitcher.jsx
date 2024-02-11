@@ -5,7 +5,7 @@ import { Globe } from 'lucide-react';
 export default function LanguageSwitcher({ lng }) {
   return (
     <div>
-      <div className="flex items-center cursor-pointer text-white">
+      <div className="flex items-center cursor-pointer ">
         {languages
           .filter((l) => lng !== l)
           .map((l, index) => {
