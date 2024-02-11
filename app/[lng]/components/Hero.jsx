@@ -23,7 +23,6 @@ const Hero = ({ lng }) => {
         autoPlay
         loop
         muted
-        playsInline
         className="absolute inset-0 object-cover w-full h-full"
       >
         <source
