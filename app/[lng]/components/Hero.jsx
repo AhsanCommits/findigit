@@ -26,7 +26,7 @@ const Hero = ({ lng }) => {
         className="absolute inset-0 object-cover w-full h-full"
       >
         <source
-          src="https://raw.githubusercontent.com/AhsanCommits/findigit/main/public/video.mp4"
+          src="https://github.com/AhsanCommits/findigit/raw/main/public/video.mp4"
           type="video/mp4"
         />
         {/* Add more source elements for different video formats if needed */}
