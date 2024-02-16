@@ -34,8 +34,8 @@ const ContactHero = ({ lng }) => {
       </video>
       <div className="absolute inset-0 items-center  flex justify-evenly flex-wrap mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="w-full sm:max-w-xl mx-auto text-center">
-          <h1 className="text-3xl font-medium sm:text-5xl text-white mb-6">
-            <span className="text-white text-4xl lg:text-6xl lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-r lg:from-yellow-400 lg:to-orange-400 leading-loose font-bold">
+          <h1 className="text-3xl font-medium sm:text-5xl text-white mb-6 drop-shadow-xl shadow-black">
+            <span className="text-white text-4xl lg:text-6xl lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-r lg:from-yellow-400 lg:to-orange-400 leading-loose font-bold drop-shadow-xl shadow-black">
               {t('contactHero.sectionTitle1')}
               <br />
             </span>
