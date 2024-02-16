@@ -34,15 +34,15 @@ const Hero = ({ lng }) => {
       </video>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="mx-auto max-w-screen-xl px-4 py-32 text-center">
-          <h1 className="text-3xl font-medium sm:text-5xl text-white animate__animated animate__backInDown drop-shadow-lg shadow-white">
+          <h1 className="text-3xl font-medium sm:text-5xl text-white animate__animated animate__backInDown drop-shadow-xl shadow-black">
             {t('hero.title.where')}{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose drop-shadow-lg shadow-yellow-500">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 leading-loose drop-shadow-xl shadow-black">
               {t('hero.title.ideas')}
             </span>{' '}
             {t('hero.title.transformInto')}
             <strong className="font-medium text-white sm:block">
               {t('hero.title.digital')}{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 drop-shadow-lg shadow-yellow-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 drop-shadow-xl shadow-black">
                 {t('hero.title.experiences')}
               </span>
             </strong>
