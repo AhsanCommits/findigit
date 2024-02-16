@@ -105,7 +105,7 @@ const Navbar = ({ lng }) => {
                   navbar || isScrolled
                     ? 'text-black'
                     : 'text-white drop-shadow-xl shadow-white ml-6'
-                } transition  font-medium hover:text-yellow-400`}
+                } transition  font-medium hover:underline hover:text-yellow-400`}
               >
                 <a href={`/${lng}`}>{t('home')}</a>
               </li>
@@ -114,7 +114,7 @@ const Navbar = ({ lng }) => {
                   navbar || isScrolled
                     ? 'text-black'
                     : 'text-white drop-shadow-xl shadow-white'
-                } transition  font-medium hover:text-yellow-400`}
+                } transition  font-medium hover:underline hover:text-yellow-400`}
               >
                 <a href={`/${lng}#services`}>{t('services')}</a>
               </li>
@@ -123,7 +123,7 @@ const Navbar = ({ lng }) => {
                   navbar || isScrolled
                     ? 'text-black'
                     : 'text-white drop-shadow-xl shadow-white'
-                } transition  font-medium hover:text-yellow-400`}
+                } transition font-medium hover:underline hover:text-yellow-400`}
               >
                 <a href={`/${lng}#testimonials`}>{t('testimonials')}</a>
               </li>
@@ -132,7 +132,7 @@ const Navbar = ({ lng }) => {
                   navbar || isScrolled
                     ? 'text-black'
                     : 'text-white drop-shadow-xl shadow-white'
-                } transition  font-medium hover:text-yellow-400`}
+                } transition  font-medium hover:underline hover:text-yellow-400`}
               >
                 <a href={`/${lng}/about`}>{t('about')}</a>
               </li>
