@@ -1,13 +1,41 @@
-import { useTranslation } from '../../i18n';
+'use client';
+import { useEffect, useRef } from 'react';
+import { useTranslation } from '../../i18n/client';
 
-const ContactHero = async ({ lng }) => {
-  const { t } = await useTranslation(lng, 'contactHero');
+const ContactHero = ({ lng }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error('Auto-play was prevented:', error);
+      });
+    }
+  }, []);
+  const { t } = useTranslation(lng, 'contactHero');
   return (
-    <section className="bg-black  z-0 " id="home">
-      <div className="flex justify-evenly flex-wrap mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <section
+      className="relative w-full h-screen overflow-hidden z-[-1] "
+      id="home"
+    >
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 object-cover w-full h-full"
+      >
+        <source
+          src="https://github.com/AhsanCommits/findigit/raw/main/public/video.mp4"
+          type="video/mp4"
+        />
+        {/* Add more source elements for different video formats if needed */}
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 items-center  flex justify-evenly flex-wrap mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="w-full sm:max-w-xl mx-auto text-center">
           <h1 className="text-3xl font-medium sm:text-5xl text-white mb-6">
-            <span className="text-4xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose font-bold">
+            <span className="text-white text-4xl lg:text-6xl lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-r lg:from-yellow-400 lg:to-orange-400 leading-loose font-bold">
               {t('contactHero.sectionTitle1')}
               <br />
             </span>
