@@ -33,7 +33,7 @@ const AboutHero = ({ lng }) => {
         {/* Add more source elements for different video formats if needed */}
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+      <div className="absolute inset-0 flex items-center justify-center mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-medium sm:text-5xl text-white drop-shadow-xl shadow-black">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 leading-loose font-bold drop-shadow-xl shadow-black">
