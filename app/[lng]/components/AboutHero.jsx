@@ -1,14 +1,42 @@
+'use client';
 import { ChevronDown } from 'lucide-react';
-import { useTranslation } from '../../i18n';
+import { useEffect, useRef } from 'react';
+import { useTranslation } from '../../i18n/client';
 
-const AboutHero = async ({ lng }) => {
-  const { t } = await useTranslation(lng, 'aboutHero');
+const AboutHero = ({ lng }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error('Auto-play was prevented:', error);
+      });
+    }
+  }, []);
+  const { t } = useTranslation(lng, 'aboutHero');
   return (
-    <section className="bg-black  z-0 " id="home">
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <section
+      className="relative w-full h-screen overflow-hidden z-[-1] "
+      id="home"
+    >
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 object-cover w-full h-full"
+      >
+        <source
+          src="https://github.com/AhsanCommits/findigit/raw/main/public/video.mp4"
+          type="video/mp4"
+        />
+        {/* Add more source elements for different video formats if needed */}
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-3xl font-medium sm:text-5xl text-white">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose font-bold">
+          <h1 className="text-3xl font-medium sm:text-5xl text-white drop-shadow-lg shadow-black">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 leading-loose font-bold drop-shadow-lg shadow-black">
               {t('title.about')}
             </span>{' '}
             <span className="underline">FinDigit</span>
