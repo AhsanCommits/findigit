@@ -33,9 +33,9 @@ const Navbar = ({ lng }) => {
   return (
     <nav
       className={`z-50 w-full shadow fixed top-0 ${
-        isScrolled ? 'bg-[#171717]' : 'bg-transparent'
+        isScrolled ? 'bg-white' : 'bg-transparent'
       }
-      ${navbar ? 'bg-white' : 'bg-[#171717]'}
+      ${navbar ? 'bg-white' : 'bg-transparent'}
       `}
     >
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -48,8 +48,10 @@ const Navbar = ({ lng }) => {
 
             <div
               className={`md:hidden flex items-center ${
-                navbar ? 'text-black' : 'text-white '
-              }`}
+                navbar || isScrolled ? 'text-black' : 'text-white'
+              }
+             
+              `}
             >
               <LanguageSwitcher lng={lng} />
               <button
@@ -100,37 +102,37 @@ const Navbar = ({ lng }) => {
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li
                 className={`${
-                  navbar
-                    ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white ml-6'
-                } transition  font-medium hover:underline`}
+                  navbar || isScrolled
+                    ? 'text-black'
+                    : 'text-white drop-shadow-xl shadow-white ml-6'
+                } transition  font-medium hover:text-yellow-400`}
               >
                 <a href={`/${lng}`}>{t('home')}</a>
               </li>
               <li
                 className={`${
-                  navbar
-                    ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white'
-                } transition  font-medium hover:underline`}
+                  navbar || isScrolled
+                    ? 'text-black'
+                    : 'text-white drop-shadow-xl shadow-white'
+                } transition  font-medium hover:text-yellow-400`}
               >
                 <a href={`/${lng}#services`}>{t('services')}</a>
               </li>
               <li
                 className={`${
-                  navbar
-                    ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white'
-                } transition  font-medium hover:underline`}
+                  navbar || isScrolled
+                    ? 'text-black'
+                    : 'text-white drop-shadow-xl shadow-white'
+                } transition  font-medium hover:text-yellow-400`}
               >
                 <a href={`/${lng}#testimonials`}>{t('testimonials')}</a>
               </li>
               <li
                 className={`${
-                  navbar
-                    ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white'
-                } transition  font-medium hover:underline`}
+                  navbar || isScrolled
+                    ? 'text-black'
+                    : 'text-white drop-shadow-xl shadow-white'
+                } transition  font-medium hover:text-yellow-400`}
               >
                 <a href={`/${lng}/about`}>{t('about')}</a>
               </li>
@@ -138,10 +140,14 @@ const Navbar = ({ lng }) => {
           </div>
         </div>
 
-        <div className="sm:flex sm:gap-4 hidden items-center justify-center text-white">
+        <div
+          className={`sm:flex sm:gap-4 hidden items-center justify-center ${
+            isScrolled ? 'text-black' : 'text-white'
+          }`}
+        >
           <LanguageSwitcher lng={lng} />
           <a
-            className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium  shadow"
+            className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-5 py-2.5 text-sm font-medium  shadow text-white"
             href={`/${lng}/contact`}
           >
             {t('contact')}
