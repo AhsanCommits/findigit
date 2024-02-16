@@ -48,7 +48,7 @@ const Navbar = ({ lng }) => {
 
             <div
               className={`md:hidden flex items-center ${
-                navbar ? 'text-black' : 'text-white'
+                navbar ? 'text-black' : 'text-white '
               }`}
             >
               <LanguageSwitcher lng={lng} />
@@ -102,8 +102,8 @@ const Navbar = ({ lng }) => {
                 className={`${
                   navbar
                     ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-white/75 ml-6'
-                } transition  font-medium hover:underline `}
+                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white ml-6'
+                } transition  font-medium hover:underline`}
               >
                 <a href={`/${lng}`}>{t('home')}</a>
               </li>
@@ -111,7 +111,7 @@ const Navbar = ({ lng }) => {
                 className={`${
                   navbar
                     ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-white/75'
+                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white'
                 } transition  font-medium hover:underline`}
               >
                 <a href={`/${lng}#services`}>{t('services')}</a>
@@ -120,7 +120,7 @@ const Navbar = ({ lng }) => {
                 className={`${
                   navbar
                     ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-white/75'
+                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white'
                 } transition  font-medium hover:underline`}
               >
                 <a href={`/${lng}#testimonials`}>{t('testimonials')}</a>
@@ -129,7 +129,7 @@ const Navbar = ({ lng }) => {
                 className={`${
                   navbar
                     ? 'text-black hover:text-black/75'
-                    : 'text-white hover:text-white/75'
+                    : 'text-white hover:text-yellow-400 drop-shadow-xl shadow-white'
                 } transition  font-medium hover:underline`}
               >
                 <a href={`/${lng}/about`}>{t('about')}</a>
