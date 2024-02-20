@@ -37,7 +37,7 @@ const Services = async ({ lng }) => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center hidden">
           <a
             href="#"
             className="inline-block rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-12 py-3 text-sm font-medium text-white transition  focus:outline-none "
