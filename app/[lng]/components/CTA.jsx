@@ -16,7 +16,7 @@ const CTA = async ({ lng }) => {
 
           <div className="mt-4 sm:mt-8">
             <a
-              href="#"
+              href={`${lng}/contact`}
               className="inline-block rounded-lg bg-transparent px-12 py-3 text-sm font-medium text-white transition border border-white hover:bg-white hover:text-black focus:outline-none"
             >
               {t('cta.buttonText')}
