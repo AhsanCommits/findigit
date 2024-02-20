@@ -2,32 +2,47 @@ export const servicesList = [
   {
     titleKey: 'aiMachineLearningTitle',
     descriptionKey: 'aiMachineLearningDescription',
-    link: '/services/ai-machine-learning',
+    link: '/',
   },
   {
-    titleKey: 'eCommerceSolutionsTitle',
-    descriptionKey: 'eCommerceSolutionsDescription',
-    link: '/services/e-commerce-solutions',
+    titleKey: 'brandingTitle',
+    descriptionKey: 'brandingDescription',
+    link: '/',
+  },
+  {
+    titleKey: 'logoDesigningTitle',
+    descriptionKey: 'logoDesigningDescription',
+    link: '/',
   },
   {
     titleKey: 'webDevelopmentTitle',
     descriptionKey: 'webDevelopmentDescription',
-    link: '/services/web-development',
+    link: '/',
   },
   {
     titleKey: 'mobileAppDevelopmentTitle',
     descriptionKey: 'mobileAppDevelopmentDescription',
-    link: '/services/mobile-app-development',
+    link: '/',
   },
   {
-    titleKey: 'softwareDevelopmentTitle',
-    descriptionKey: 'softwareDevelopmentDescription',
-    link: '/services/software-development',
+    titleKey: 'socialMediaMarketingTitle',
+    descriptionKey: 'socialMediaMarketingDescription',
+    link: '/',
   },
   {
-    titleKey: 'cybersecurityServicesTitle',
-    descriptionKey: 'cybersecurityServicesDescription',
-    link: '/services/cybersecurity-services',
+    titleKey: 'mediaPlaningTitle',
+    descriptionKey: 'mediaPlaningDescription',
+    link: '/',
+  },
+  {
+    titleKey: 'emailMarketingTitle',
+    descriptionKey: 'emailMarketingDescription',
+    link: '/',
+  },
+  {
+    titleKey: 'googleAdsTitle',
+    descriptionKey: 'googleAdsDescription',
+    link: '/',
   },
 ];
 
