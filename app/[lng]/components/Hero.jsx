@@ -14,10 +14,7 @@ const Hero = ({ lng }) => {
   }, []);
   const { t } = useTranslation(lng, 'hero');
   return (
-    <section
-      className="relative w-full h-screen overflow-hidden z-[-1]"
-      id="home"
-    >
+    <section className="relative w-full h-screen overflow-hidden z-1" id="home">
       <video
         ref={videoRef}
         autoPlay
@@ -51,7 +48,7 @@ const Hero = ({ lng }) => {
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate__animated animate__backInUp">
             <a
               className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg block px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring w-auto"
-              href="/contact"
+              href={`/${lng}/contact`}
             >
               {t('hero.button.text')}
             </a>

@@ -8,12 +8,18 @@
       "number": "الرقم",
       "email": "البريد الإلكتروني"
     },
-    "industryLabel": "الصناعات",
-    "industryOptions": {
-      "default": "أي صناعة",
-      "web": "تطوير الويب",
-      "app": "تطوير التطبيقات",
-      "ai": "الذكاء الاصطناعي"
+    "servicesLabel": "الخدمات",
+    "servicesOptions": {
+      "default": "أي خدمة",
+      "ai_ml": "الذكاء الاصطناعي وتعلم الآلة",
+      "branding": "براندينج",
+      "logo_designing": "تصميم الشعارات",
+      "web_development": "تطوير المواقع الإلكترونية",
+      "mobile_app_development": "تطوير تطبيقات الهواتف الذكية",
+      "social_media_marketing": "التسويق عبر وسائل التواصل الاجتماعي",
+      "media_planning": "تخطيط الوسائط",
+      "email_marketing": "التسويق عبر البريد الإلكتروني",
+      "google_ads": "إعلانات جوجل"
     },
     "submitButton": "إرسال"
   }

@@ -20,7 +20,7 @@ const Stats = async ({ lng }) => {
         </div>
 
         <div className="mt-12 sm:mt-0 flex border border-black w-full sm:max-w-fit rounded-lg">
-          <dl className="grid grid-cols-1 gap-4 sm:grid-cols-1 sm:divide-x sm:divide-gray-100 bg-[#EBF1FD]">
+          <dl className="grid grid-cols-1 gap-4 sm:grid-cols-1 sm:divide-x sm:divide-gray-100 bg-[#EBF1FD] rounded-s-lg">
             <div className="flex flex-col px-4 py-8 text-center">
               <dt className="mt-4 order-last text-lg font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500">
                 {t('stats.metrics.activePageviews.title')}

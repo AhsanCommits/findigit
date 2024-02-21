@@ -15,7 +15,7 @@ const ContactHero = ({ lng }) => {
   const { t } = useTranslation(lng, 'contactHero');
   return (
     <section
-      className="relative w-full h-screen overflow-hidden z-[-1] "
+      className="relative w-full h-screen overflow-hidden z-[1] "
       id="home"
     >
       <video
@@ -35,7 +35,7 @@ const ContactHero = ({ lng }) => {
       <div className="absolute inset-0 items-center  flex justify-evenly flex-wrap mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="w-full sm:max-w-xl mx-auto text-center">
           <h1 className="text-3xl font-medium sm:text-5xl text-white mb-6 drop-shadow-xl shadow-black">
-            <span className="text-white text-4xl lg:text-6xl lg:bg-clip-text lg:text-transparent lg:bg-gradient-to-r lg:from-yellow-400 lg:to-orange-400 leading-loose font-bold drop-shadow-xl shadow-black">
+            <span className="text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 leading-loose font-bold drop-shadow-xl shadow-black">
               {t('contactHero.sectionTitle1')}
               <br />
             </span>
@@ -44,7 +44,7 @@ const ContactHero = ({ lng }) => {
         </div>
 
         <div className="w-full sm:max-w-xl mx-auto px-4 py-8 sm:px-6 lg:px-8 bg-white rounded-lg">
-          <div className="mx-auto max-w-lg ">
+          <div className="mx-auto max-w-lg">
             <h1
               className="text-2xl font-semibold
          sm:text-3xl"
@@ -100,21 +100,39 @@ const ContactHero = ({ lng }) => {
               </label>
 
               <select
-                name="industry"
-                id="industry"
+                name="services"
+                id="services"
                 className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm bg-white"
               >
                 <option value="">
-                  {t('contactHero.industryOptions.default')}
+                  {t('contactHero.servicesOptions.default')}
                 </option>
-                <option value="web">
-                  {t('contactHero.industryOptions.web')}
+                <option value="ai_ml">
+                  {t('contactHero.servicesOptions.ai_ml')}
                 </option>
-                <option value="app">
-                  {t('contactHero.industryOptions.app')}
+                <option value="branding">
+                  {t('contactHero.servicesOptions.branding')}
                 </option>
-                <option value="ai">
-                  {t('contactHero.industryOptions.ai')}
+                <option value="logo_designing">
+                  {t('contactHero.servicesOptions.logo_designing')}
+                </option>
+                <option value="web_development">
+                  {t('contactHero.servicesOptions.web_development')}
+                </option>
+                <option value="mobile_app_development">
+                  {t('contactHero.servicesOptions.mobile_app_development')}
+                </option>
+                <option value="social_media_marketing">
+                  {t('contactHero.servicesOptions.social_media_marketing')}
+                </option>
+                <option value="media_planning">
+                  {t('contactHero.servicesOptions.media_planning')}
+                </option>
+                <option value="email_marketing">
+                  {t('contactHero.servicesOptions.email_marketing')}
+                </option>
+                <option value="google_ads">
+                  {t('contactHero.servicesOptions.google_ads')}
                 </option>
               </select>
             </div>

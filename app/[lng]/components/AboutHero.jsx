@@ -15,10 +15,7 @@ const AboutHero = ({ lng }) => {
   }, []);
   const { t } = useTranslation(lng, 'aboutHero');
   return (
-    <section
-      className="relative w-full h-screen overflow-hidden z-[-1] "
-      id="home"
-    >
+    <section className="relative w-full h-screen overflow-hidden z-1" id="home">
       <video
         ref={videoRef}
         autoPlay
