@@ -1,9 +1,42 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../../i18n/client';
+
+const initValues = {
+  name: '',
+  number: '',
+  email: '',
+  services: '',
+};
+
+const initState = {
+  values: initValues,
+  // errors: { name: '', number: '', email: '', services: '' },
+};
 
 const ContactHero = ({ lng }) => {
   const videoRef = useRef(null);
+  const [state, setState] = useState(initState);
+  const [touched, setTouched] = useState({});
+  const { values } = state;
+
+  const onBlur = ({ target }) =>
+    setTouched((prev) => ({ ...prev, [target.name]: true }));
+
+  const handleChange = ({ target }) =>
+    setState((prevState) => ({
+      ...prevState,
+      values: {
+        ...prevState.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+    }));
+  };
 
   useEffect(() => {
     if (videoRef.current) {
@@ -13,6 +46,7 @@ const ContactHero = ({ lng }) => {
     }
   }, []);
   const { t } = useTranslation(lng, 'contactHero');
+
   return (
     <section
       className="relative w-full h-screen overflow-hidden z-[1] "
@@ -62,8 +96,15 @@ const ContactHero = ({ lng }) => {
               <div className="relative">
                 <input
                   type="text"
-                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A]"
+                  className={`w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A] ${
+                    touched.name && !values.name ? 'border-red-500' : ''
+                  }`}
                   placeholder={t('contactHero.placeholders.name')}
+                  value={values.name}
+                  name="name"
+                  onChange={handleChange}
+                  onBlur={onBlur}
+                  required
                 />
               </div>
             </div>
@@ -75,8 +116,15 @@ const ContactHero = ({ lng }) => {
               <div className="relative">
                 <input
                   type="text"
-                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A]"
+                  className={`w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A] ${
+                    touched.number && !values.number ? 'border-red-500' : ''
+                  }`}
                   placeholder={t('contactHero.placeholders.number')}
+                  value={values.number}
+                  name="number"
+                  onChange={handleChange}
+                  onBlur={onBlur}
+                  required
                 />
               </div>
             </div>
@@ -88,50 +136,63 @@ const ContactHero = ({ lng }) => {
               <div className="relative">
                 <input
                   type="email"
-                  className="w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm"
+                  className={`w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm"  ${
+                    touched.email && !values.email ? 'border-red-500' : ''
+                  }`}
                   placeholder={t('contactHero.placeholders.email')}
+                  value={values.email}
+                  name="email"
+                  onChange={handleChange}
+                  required
+                  onBlur={onBlur}
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="industry" className="sr-only">
-                {t('contactHero.industryLabel')}
+              <label htmlFor="services" className="sr-only">
+                {t('contactHero.servicesLabel')}
               </label>
 
               <select
                 name="services"
                 id="services"
-                className="mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm bg-white"
+                className={`mt-1.5 text-gray-700 sm:text-sm w-full rounded-lg border border-[#00103A] p-4 pe-12 text-sm shadow-sm bg-white"  ${
+                  touched.services && !values.services ? 'border-red-500' : ''
+                }`}
+                onChange={handleChange}
+                value={values.services}
+                required
+                onBlur={onBlur}
               >
-                <option value="">
+                <option disabled value="">
                   {t('contactHero.servicesOptions.default')}
                 </option>
-                <option value="ai_ml">
+                <option value="AI & Machine Learning">
                   {t('contactHero.servicesOptions.ai_ml')}
                 </option>
-                <option value="branding">
+                <option value="Branding">
                   {t('contactHero.servicesOptions.branding')}
                 </option>
-                <option value="logo_designing">
+                <option value="Logo Designing">
                   {t('contactHero.servicesOptions.logo_designing')}
                 </option>
-                <option value="web_development">
+                <option value="Web Development">
                   {t('contactHero.servicesOptions.web_development')}
                 </option>
-                <option value="mobile_app_development">
+                <option value="Mobile App Development">
                   {t('contactHero.servicesOptions.mobile_app_development')}
                 </option>
-                <option value="social_media_marketing">
+                <option value="Social Media Marketing">
                   {t('contactHero.servicesOptions.social_media_marketing')}
                 </option>
-                <option value="media_planning">
+                <option value="Media Planning">
                   {t('contactHero.servicesOptions.media_planning')}
                 </option>
-                <option value="email_marketing">
+                <option value="Email Marketing">
                   {t('contactHero.servicesOptions.email_marketing')}
                 </option>
-                <option value="google_ads">
+                <option value="Google Ads">
                   {t('contactHero.servicesOptions.google_ads')}
                 </option>
               </select>
@@ -140,7 +201,14 @@ const ContactHero = ({ lng }) => {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-10 py-2.5 text-sm font-medium text-white shadow"
+                className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-10 py-2.5 text-sm font-medium text-white shadow disabled:opacity-75 disabled:cursor-not-allowed"
+                disabled={
+                  !values.name ||
+                  !values.number ||
+                  !values.email ||
+                  !values.services
+                }
+                onClick={onSubmit}
               >
                 {t('contactHero.submitButton')}
               </button>
