@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import { sendContactForm } from '@/lib/api';
 
 const initValues = {
   name: '',
@@ -11,14 +12,13 @@ const initValues = {
 
 const initState = {
   values: initValues,
-  // errors: { name: '', number: '', email: '', services: '' },
 };
 
-const ContactHero = ({ lng }) => {
+const ContactHero = () => {
   const videoRef = useRef(null);
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
-  const { values } = state;
+  const { values, error } = state;
 
   const onBlur = ({ target }) =>
     setTouched((prev) => ({ ...prev, [target.name]: true }));
@@ -32,10 +32,22 @@ const ContactHero = ({ lng }) => {
       },
     }));
 
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
     setState((prev) => ({
       ...prev,
     }));
+
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+      }));
+    }
   };
 
   useEffect(() => {
@@ -84,7 +96,21 @@ const ContactHero = ({ lng }) => {
             </h1>
           </div>
 
-          <form action="" className="mx-auto mb-0 mt-8 space-y-4">
+          {error && (
+            <div className="mx-auto max-w-lg">
+              <p className="mt-4 text-red-500">{error}</p>
+            </div>
+          )}
+
+          {state.success && (
+            <div className="mx-auto max-w-lg">
+              <p className="mt-4 text-green-500">
+                Form submitted successfully!
+              </p>
+            </div>
+          )}
+
+          <form className="mx-auto mb-0 mt-8 space-y-4">
             <div>
               <label htmlFor="name" className="sr-only">
                 Name
