@@ -8,7 +8,7 @@ const page = () => {
     <>
       <ContactHero />
       <ContactUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTA />
     </>
   );

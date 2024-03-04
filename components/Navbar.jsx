@@ -127,7 +127,7 @@ const Navbar = () => {
               >
                 <a href={getLocalizedPath('#services')}>{t('services')}</a>
               </li>
-              <li
+              {/* <li
                 className={`${
                   navbar || isScrolled
                     ? 'text-black'
@@ -137,7 +137,7 @@ const Navbar = () => {
                 <a href={getLocalizedPath('#testimonials')}>
                   {t('testimonials')}
                 </a>
-              </li>
+              </li> */}
               <li
                 className={`${
                   navbar || isScrolled
