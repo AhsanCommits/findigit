@@ -138,7 +138,7 @@ const ContactHero = () => {
 
               <div className="relative">
                 <input
-                  type="text"
+                  type="tel"
                   className={`w-full rounded-lg p-4 pe-12 text-sm shadow-sm border border-[#00103A] ${
                     touched.number && !values.number ? 'border-red-500' : ''
                   }`}
