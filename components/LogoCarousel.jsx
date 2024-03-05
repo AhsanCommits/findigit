@@ -130,9 +130,10 @@ const LogoCarousel = () => {
           <Image src="/logos/z.png" alt="z" width="50" height="50" />
         </li>
       </ul>
+
       <ul
-        x-ref="logos"
-        class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        aria-hidden="true"
       >
         <li>
           <Image
