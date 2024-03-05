@@ -110,7 +110,7 @@ const ContactHero = () => {
             </div>
           )}
 
-          <form className="mx-auto mb-0 mt-8 space-y-4">
+          <form className="mx-auto space-y-4">
             <div>
               <label htmlFor="name" className="sr-only">
                 Name
