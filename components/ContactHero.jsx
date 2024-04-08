@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 import { sendContactForm } from '@/lib/api';
 
 const initValues = {
@@ -39,6 +39,7 @@ const ContactHero = () => {
       ...prev,
     }));
 
+    alert('Form submitted successfully!');
     try {
       await sendContactForm(values);
       setTouched({});

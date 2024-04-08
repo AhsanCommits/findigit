@@ -1,4 +1,4 @@
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
 const Stats = ({ lng }) => {
   const { t } = useTranslation('stats');

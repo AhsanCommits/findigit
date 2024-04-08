@@ -1,5 +1,5 @@
 import { Mail, MailOpen, MessageCircle, PhoneCall } from 'lucide-react';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
 const ContactUs = ({ lng }) => {

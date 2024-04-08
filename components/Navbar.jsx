@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import logo from '@/public/logo.webp';
 import Image from 'next/image';

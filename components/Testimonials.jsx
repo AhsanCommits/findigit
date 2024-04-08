@@ -1,5 +1,5 @@
 import { testimonialsList } from '@/constants';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
 const Testimonials = () => {
   const { t } = useTranslation('testimonials');
